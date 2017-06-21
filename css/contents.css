@@ -1,0 +1,185 @@
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+body {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: #000;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+img {
+    border: 0;
+}
+
+a img {
+    border: none;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    /*text-decoration: underline;*/
+    color: #222;
+    text-decoration: none;
+}
+
+a:visited {
+    /*text-decoration: underline;*/
+    color: #222;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix:after,
+.Multicolumn:after,
+.row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix,
+.Multicolumn {
+    display: inline-table;
+}
+
+/* Hides from IE-mac \*/
+
+* html .clearfix,
+* html .Multicolumn {
+    height: 1%;
+}
+
+.clearfix,
+.Multicolumn {
+    display: block;
+}
+
+/* lightbox */
+
+#lightboxContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#lightboxContainer img.lightboxLoading {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 120;
+}
+
+#lightboxContainer img.lightboxImg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 120;
+}
+
+#lightboxContainer .lightboxOverlay {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: rgba(0, 0, 0, .4);
+    z-index: 100;
+    position: fixed;
+}
+
+.lightBoxClose {
+    position: fixed;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    right: 8px;
+    top: 8px;
+    z-index: 300;
+    cursor: pointer;
+}
+
+.lightBoxClose:before,
+.lightBoxClose:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 22px;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    z-index: 300;
+}
+
+.lightBoxClose:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.lightBoxClose:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.lightboxThumb {
+    cursor: pointer;
+}
+
+.lightboxThumb:hover {
+    opacity: .7;
+}
